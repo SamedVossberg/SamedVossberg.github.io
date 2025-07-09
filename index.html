@@ -44,6 +44,15 @@
               />
             </svg>
           </a>
+          <a href="https://scholar.google.com/citations?user=J4QLXwUAAAAJ&hl=de" class="header__social">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialScholar" role="img" viewBox="0 0 512 512"> 
+            <title id="socialScholar">Google Scholar</title>
+            <path fill="#FFF" fill-rule="evenodd" d="M256 411.12L0 202.667 256 0z"/>
+            <path fill="#FFF" fill-rule="evenodd" d="M256 411.12l256-208.453L256 0z"/>
+            <circle fill="#FFF" fill-rule="evenodd" cx="256" cy="362.667" r="149.333"/>
+            <path  fill="#FFF" fill-rule="evenodd" d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z"/>
+            </svg>
+          </a>
           <a href="https://www.linkedin.com/in/samed-rouven-v-a110a116b/" class="header__social">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +114,7 @@
                 I'm <span>Samed Vossberg</span>.
               </h1>
               <p class="hero__description">
-                A Software Engineer from Germany, passionate about Machine Learning and Neuroscience. Master's student in Information Systems at KIT.
+                A master's student in Information Systems at the Karlsruhe Institute of Technology (KIT), Germany. I am passionate about Machine Learning and Neuroscience. I recently interned at <a href="https://neurologie.charite.de/metas/person/person/address_detail/juniorprof_dr_med_wolf_julian_neumann"> Prof. Wolf-Julian Neumann</a>'s Neuromodulation Lab at Charité.
               </p>
               <a href="#contact" class="hero__contact underline">Contact me</a>
             </div>
@@ -113,7 +122,7 @@
         </div>
       </section>
 
-      <section class="skills">
+      <!-- <section class="skills">
         <div class="wrapper skills__wrapper bottom-border">
           <h2 class="visually-hidden">Skills</h2>
           <div class="skills__item">
@@ -148,16 +157,44 @@
           width="530"
           height="129"
         />
-      </section>
+      </section> -->
 
       <section class="projects">
         <div class="wrapper projects__wrapper">
           <div class="projects__grid">
-            <h2 class="projects__headline header-xl">Projects & Research</h2>
+            <h2 class="projects__headline header-xl">Research</h2>
             <a href="#contact" class="projects__contact underline"
               >Contact me</a
             >
 
+            <!-- py_neuromodulation -->
+            <div class="projects__item">
+              <picture class="projects__picture">
+                <source
+                  media="(min-width: 62.5em)"
+                  srcset="/assets/images/OCTIKT.png"
+                />
+                <img
+                  class="projects__image"
+                  src="/assets/images/brain_py_neuromodulation.png"
+                  alt="screenshot of 4-player memory game with circular tiles that have symbols"
+                  width-="343"
+                  height="253"
+                />
+              </picture>
+              <h3 class="projects__name">Invasive neurophysiology and whole brain connectomics for neural decoding in patients with brain implants</h3>
+              <p class="projects__tags">
+                <span>Python</span>
+                <span>Neuroscience</span>
+              </p>
+              <div class="projects__links">
+                <a href="https://github.com/neuromodulation/py_neuromodulation" class="underline">View Code</a>
+                <!-- <a href="" class="underline">View Paper</a> -->
+              </div>
+            </div>
+
+
+            <!-- CAGE Emotion Inference  -->
             <div class="projects__item">
               <picture class="projects__picture">
                 <source
@@ -172,17 +209,47 @@
                   height="253"
                 />
               </picture>
-              <h3 class="projects__name">CAGE Emotion Inference Paper</h3>
+              <h3 class="projects__name">CAGE: Circumplex Affect Guided Expression Inference</h3>
               <p class="projects__tags">
                 <span>Python</span>
                 <span>Machine Learning</span>
               </p>
               <div class="projects__links">
-                <a href="https://arxiv.org/abs/2404.14975" class="underline">View Project</a>
+                <a href="https://openaccess.thecvf.com/content/CVPR2024W/ABAW/html/Wagner_CAGE_Circumplex_Affect_Guided_Expression_Inference_CVPRW_2024_paper.html" class="underline">View Paper</a>
                 <a href="https://github.com/wagner-niklas/CAGE_expression_inference" class="underline">View Code</a>
               </div>
             </div>
 
+
+            <!-- TBMEnv -->
+            <div class="projects__item">
+              <picture class="projects__picture">
+                <source
+                  media="(min-width: 62.5em)"
+                  srcset="/assets/images/OCTIKT.png"
+                />
+                <img
+                  class="projects__image"
+                  src="/assets/images/TBMEnv.png"
+                  alt="screenshot of 4-player memory game with circular tiles that have symbols"
+                  width-="343"
+                  height="253"
+                />
+              </picture>
+              <h3 class="projects__name">TBMEnv - An Environment to Assess the Accuracy of Thermal Building Models under Realistic Conditions</h3>
+              <p class="projects__tags">
+                <span>Python</span>
+                <span>Data Sciecne</span>
+              </p>
+              <div class="projects__links">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3600100.3625683" class="underline">View Paper</a>
+                <a href="https://github.com/fzi-forschungszentrum-informatik/TBMEnv?tab=readme-ov-file" class="underline">View Code</a>
+              </div>
+            </div>
+
+
+
+            <!-- OCTIKT -->
             <div class="projects__item">
               <picture class="projects__picture">
                 <source
@@ -208,6 +275,8 @@
                 <!-- <a href="" class="underline">View Code</a> -->
               </div>
             </div>
+
+            </div>
           </div>
         </div>
       </section>
@@ -218,7 +287,7 @@
                 <h2 class="contact__headline header-xl">Contact</h2>
                 <p class="contact__description">
                     I would love to hear about your project and how I could help.
-                    Please click the button below to send me an email, and I'll get back to you as soon as possible.
+                    Please click the button to send me an email, and I'll get back to you as soon as possible.
                 </p>
             </div>
             <div class="contact__control align-right">
@@ -259,6 +328,15 @@
                 fill-rule="evenodd"
                 d="M12.304 0C5.506 0 0 5.506 0 12.304c0 5.444 3.522 10.042 8.413 11.672.615.108.845-.261.845-.584 0-.292-.015-1.261-.015-2.291-3.091.569-3.891-.754-4.137-1.446-.138-.354-.738-1.446-1.261-1.738-.43-.23-1.046-.8-.016-.815.97-.015 1.661.892 1.892 1.261 1.107 1.86 2.876 1.338 3.584 1.015.107-.8.43-1.338.784-1.646-2.738-.307-5.598-1.368-5.598-6.074 0-1.338.477-2.446 1.26-3.307-.122-.308-.553-1.569.124-3.26 0 0 1.03-.323 3.383 1.26.985-.276 2.03-.415 3.076-.415 1.046 0 2.092.139 3.076.416 2.353-1.6 3.384-1.261 3.384-1.261.676 1.691.246 2.952.123 3.26.784.861 1.26 1.953 1.26 3.307 0 4.721-2.875 5.767-5.613 6.074.446.385.83 1.123.83 2.277 0 1.645-.015 2.968-.015 3.383 0 .323.231.708.846.584a12.324 12.324 0 0 0 8.382-11.672C24.607 5.506 19.101 0 12.304 0Z"
               />
+            </svg>
+          </a>
+          <a href="https://scholar.google.com/citations?user=J4QLXwUAAAAJ&hl=de" class="header__social">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialScholar" role="img" viewBox="0 0 512 512"> 
+            <title id="socialScholar">Google Scholar</title>
+            <path fill="#FFF" fill-rule="evenodd" d="M256 411.12L0 202.667 256 0z"/>
+            <path fill="#FFF" fill-rule="evenodd" d="M256 411.12l256-208.453L256 0z"/>
+            <circle fill="#FFF" fill-rule="evenodd" cx="256" cy="362.667" r="149.333"/>
+            <path  fill="#FFF" fill-rule="evenodd" d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z"/>
             </svg>
           </a>
           <a href="https://www.linkedin.com/in/samed-rouven-v-a110a116b/" class="header__social">

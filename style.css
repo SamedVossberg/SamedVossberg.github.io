@@ -30,6 +30,10 @@ html {
   font-size: 100%;
 }
 
+a {
+  color: var(--accent)
+}
+
 *,
 *::before,
 *::after {
@@ -478,7 +482,7 @@ h1 > span {
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 50px;
   justify-items: center;
   text-align: center;
 }
@@ -509,19 +513,20 @@ h1 > span {
 }
 
 .projects__name {
-  font-size: 1.5rem;
+  font-size: 1.3 rem;
   line-height: 1.3;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-block-end: 7px;
 }
 
 .projects__tags {
   display: flex;
+  font-size: 1 rem;
   justify-content: center;
   gap: 12px;
   margin-block-end: 20px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .projects__links {
