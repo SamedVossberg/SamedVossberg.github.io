@@ -809,13 +809,15 @@ footer {
   }
 }
 
-/* Venue styling for papers */
+/* Venue styling for papers - replaces tags */
 .projects__venue {
   font-size: 0.875rem;
   color: var(--accent);
   font-weight: 500;
-  margin-block-start: -0.5rem;
-  margin-block-end: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-block-start: 0.5rem;
+  margin-block-end: 1rem;
 }
 
 /* Blog navigation link */
