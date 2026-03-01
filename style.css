@@ -808,3 +808,98 @@ footer {
     padding-block: 47px 92px;
   }
 }
+
+/* Venue styling for papers */
+.projects__venue {
+  font-size: 0.875rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-block-start: -0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+/* Blog navigation link */
+.header__nav-link {
+  color: var(--text1);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color var(--transition);
+  margin-inline-end: 1rem;
+}
+
+.header__nav-link:hover,
+.header__nav-link.active {
+  color: var(--accent);
+}
+
+/* Blog post styles */
+.blog-post-full {
+  padding-block-start: 100px;
+  padding-block-end: 80px;
+}
+
+.blog-header {
+  margin-block-end: 3rem;
+}
+
+.blog-meta {
+  color: var(--accent);
+  font-size: 0.875rem;
+  margin-block-start: 1rem;
+}
+
+.blog-content {
+  max-width: 50rem;
+}
+
+.blog-content h2 {
+  font-size: var(--fs-24);
+  margin-block-start: 2.5rem;
+  margin-block-end: 1rem;
+  color: var(--text1);
+}
+
+.blog-content p {
+  margin-block-end: 1rem;
+}
+
+.blog-content ul {
+  margin-block-end: 1rem;
+  padding-inline-start: 1.5rem;
+}
+
+.blog-content li {
+  margin-block-end: 0.5rem;
+}
+
+.blog-content pre {
+  background-color: var(--bg-body2);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-block: 1.5rem;
+}
+
+.blog-content code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-size: 0.875rem;
+  color: var(--accent);
+}
+
+.blog-content pre code {
+  background: transparent;
+  color: var(--text1);
+}
+
+.blog-excerpt {
+  color: var(--text2);
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+.blog-lead {
+  font-size: 1.25rem;
+  color: var(--text2);
+  margin-block-end: 2rem;
+}
