@@ -837,18 +837,17 @@ footer {
 
 /* Blog post styles */
 .blog-post-full {
-  padding-block-start: 100px;
-  padding-block-end: 80px;
+  padding-block: 60px;
 }
 
 .blog-header {
-  margin-block-end: 3rem;
+  margin-block-end: 2rem;
 }
 
 .blog-meta {
-  color: var(--accent);
+  color: var(--text2);
   font-size: 0.875rem;
-  margin-block-start: 1rem;
+  margin-block-start: 0.5rem;
 }
 
 .blog-content {
@@ -856,14 +855,22 @@ footer {
 }
 
 .blog-content h2 {
-  font-size: var(--fs-24);
+  font-size: 1.5rem;
   margin-block-start: 2.5rem;
   margin-block-end: 1rem;
-  color: var(--text1);
 }
 
 .blog-content p {
-  margin-block-end: 1rem;
+  margin-block-end: 1.25rem;
+  line-height: 1.7;
+}
+
+.blog-content a {
+  color: var(--accent);
+}
+
+.blog-content a:hover {
+  text-decoration: underline;
 }
 
 .blog-content ul {
@@ -922,13 +929,6 @@ footer {
   color: var(--text2);
   margin-block-end: 2rem;
 }
-.blog-post-full { padding-block: 60px; }
-.blog-header { margin-block-end: 2rem; }
-.blog-meta { color: var(--text2); font-size: 0.875rem; margin-block-start: 0.5rem; }
-.blog-content h2 { font-size: 1.5rem; margin-block-start: 2.5rem; margin-block-end: 1rem; }
-.blog-content p { margin-block-end: 1.25rem; line-height: 1.7; }
-.blog-content a { color: var(--accent); }
-.blog-content a:hover { text-decoration: underline; }
 .blog-references { margin-block-start: 3rem; padding-block-start: 2rem; border-top: 1px solid var(--text2); }
 .blog-references h3 { font-size: 1.25rem; margin-block-end: 1rem; }
 .blog-references ol { padding-left: 1.5rem; }
