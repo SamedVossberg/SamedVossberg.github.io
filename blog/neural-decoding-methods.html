@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png" />
   <link rel="stylesheet" href="../style.css" />
-  <title>Neural Decoding Methods: From Single Cells to Deep Learning | Samed Vossberg</title>
+  <title>Neural Decoding: From Single Cells to Brain-Computer Interfaces | Samed Vossberg</title>
 </head>
 <body>
   <header class="header">
@@ -17,7 +17,7 @@
       <nav class="header__nav">
         <h2 class="visually-hidden">Navigation</h2>
         <a href="/" class="header__home"> SamedVossberg <span class="visually-hidden">(to home page)</span> </a>
-        <a href="/blog/" class="header__nav-link">Blog</a>
+        <a href="/blog/" class="header__nav-link active">Blog</a>
         <a href="https://github.com/SamedVossberg" class="header__social">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialGitHub" role="img">
             <title id="socialGitHub">GitHub</title>
@@ -42,78 +42,85 @@
       </nav>
     </div>
   </header>
+
   <main id="main">
     <article class="blog-post-full">
       <div class="wrapper">
         <header class="blog-header">
-          <h1 class="header-xl">Neural Decoding Methods: From Single Cells to Deep Learning</h1>
-          <p class="blog-meta">Published: June 2025 | Tags: Neuroscience, Neural Decoding, Machine Learning</p>
+          <h1 class="header-xl">Neural Decoding: From Single Cells to Brain-Computer Interfaces</h1>
+          <p class="blog-meta">Published: June 2025 | Tags: Neuroscience, Neural Decoding, BCI, Machine Learning</p>
         </header>
+
         <div class="blog-content">
-          <p class="blog-lead">Neural decoding—the process of extracting information from brain activity—has transformed from single-unit studies to sophisticated deep learning approaches. This evolution is enabling breakthroughs in brain-computer interfaces and our understanding of neural computation.</p>
+          <p class="blog-lead">Neural decoding is all about reading signals from the brain and translating them into something useful. What started with simple recordings from single neurons has evolved into sophisticated systems that can control robotic arms just by thinking about movements. In this post I will walk you through the major milestones and papers that shaped this field.</p>
 
-          <h2>Classical Approaches: Linear Decoding</h2>
-          <p>Population vector methods first demonstrated that distributed neural activity could be decoded using simple linear models. These approaches assume that neural firing rates encode information in a straightforward, additive fashion—sufficient for coarse motor decoding but limiting for cognitive content.</p>
+          <h2>Single neuron recordings</h2>
+          <p>In the late 1950s and early 1960s, researchers made the first systematic recordings from single neurons in behaving animals. These early studies showed that individual neurons could encode specific information about movements and sensory events. The idea was straightforward: if you record from enough neurons simultaneously, you can get a fairly good picture of what the brain is trying to do.</p>
 
-          <h2>Deep Learning and Behavioral Decoding</h2>
-          <p>The introduction of convolutional neural networks (CNNs) to behavioral quantification fundamentally changed what could be decoded from neural data. Mathis et al. (2018), publishing in <em>Nature Neuroscience</em>, demonstrated that markerless pose estimation through their framework DeepLabCut could achieve human-level accuracy in tracking animal behavior from video. This work established the principle that deep learning could bridge the gap between raw behavioral video and quantitative readouts, paving the way for neural-behavioral decoding (<a href="https://doi.org/10.1038/s41593-018-0209-y">Mathis et al., 2018, Nature Neuroscience</a>).</p>
+          <h2>Linear decoding and the population vector</h2>
+          <p>The groundbreaking work by Georgopoulos and colleagues in the 1980s showed that you can use simple linear methods to decode movement direction from the motor cortex. They introduced the population vector algorithm, which essentially takes the preferred direction of each neuron and weights it by the neuron's firing rate.</p>
 
-          <p>Building on this foundation, Mathis and colleagues extended their approach to neural decoding itself, showing that deep neural architectures could extract latent dynamics from high-dimensional neural population activity. Their work in <em>Nature Methods</em> established that recurrent neural networks could learn the temporal structure necessary for accurate predictive decoding from single-trial neural data (<a href="https://doi.org/10.1038/s41592-022-01443-9">Mathis, 2022, Nature Methods</a>).</p>
+          <p>This was a big deal because it showed that you do not need complex nonlinear models to extract meaningful information from neural populations. You can find their seminal 1986 paper in Science: <a href="https://doi.org/10.1126/science.3748611" target="_blank">Georgopoulos et al., Science 83: 1416-1419 (1986)</a>. Their follow up work in the late 1980s established the population coding framework: <a href="https://doi.org/10.1523/jneurosci.08-08-02923.1988" target="_blank">Georgopoulos et al., Journal of Neuroscience 8: 2928-2937 (1988)</a>.</p>
 
-          <h2>Decoding Human Memory and Cognition</h2>
-          <p>While rodent studies offer population-scale recordings, human intracranial recordings provide unique windows into cognition. Rütihauser and colleagues at Caltech and UCLA have pioneered the decoding of episodic memory from single-unit activity in the human medial temporal lobe. Their work published in <em>Nature Communications</em> demonstrated that sparse populations of neurons in the hippocampus encode specific episodic memories with remarkable specificity—enabling classification of memory categories from single trials (<a href="https://doi.org/10.1038/s41467-018-06278-8">Rütihauser et al., 2018, Nature Communications</a>).</p>
+          <h2>Brain computer interfaces take off</h2>
+          <p>By the late 1990s and early 2000s, the field was moving fast. Several labs showed that you could use neural signals to control external devices in real time.</p>
 
-          <p>The clinical relevance of this research is profound. In patients with drug-resistant epilepsy undergoing monitoring with depth electrodes, Rütihauser's group showed that memory decoding could be achieved in real-time, with implications for closed-loop memory prosthetics. Their 2015 paper in <em>Science</em> reported that activation of a small number of entorhinal cells was sufficient to alter memory formation in human subjects—a finding with direct translational relevance (<a href="https://doi.org/10.1126/science.aaf8168">Rütihauser et al., 2015, Science</a>).</p>
+          <p>A major milestone came from the Donoghue lab at Brown University. They showed that paralyzed patients could control a computer cursor just by thinking about movement. Their seminal 2006 Nature paper with Leigh Hochberg remains one of the most cited works in the clinical BCI field. You can read about their BrainGate system here: <a href="https://doi.org/10.1038/nature04970" target="_blank">Hochberg et al., Nature 442: 164-171 (2006)</a>.</p>
 
-          <h2>Current Challenges and Future Directions</h2>
-          <p>Modern neural decoding faces several key challenges. First, the non-stationarity of neural signals over time requires decoders that can adapt to drift in neural activity. Second, the high dimensionality of neural data relative to limited training samples necessitates careful regularization. Third, causal interpretation of decoded patterns remains difficult—correlation does not establish mechanism.</p>
+          <h2>Deep learning and neural decoding</h2>
+          <p>About ten years ago, machine learning started changing how we decode neural activity. Traditional methods based on linear models and simple Kalman filters were good but limited. Deep neural networks opened up new possibilities for handling the complexity and noise in neural data.</p>
 
-          <p>The field is moving toward areas of active development: transformer architectures for long-horizon temporal dependencies, self-supervised learning to leverage unlabeled neural data, and causal decoding approaches that establish necessary versus sufficient coding elements.</p>
+          <p>The DeepLabCut paper by Mathis and colleagues in 2018 showed that deep learning could be used for markerless pose estimation from video. While not strictly neural decoding, this work demonstrated that CNNs could extract precise behavioral information from messy data. Check out their paper: <a href="https://doi.org/10.1038/s41593-018-0209-y" target="_blank">Mathis et al., Nature Neuroscience 21: 1281-1289 (2018)</a>. Their 2020 Nature Methods paper extended this to 3D tracking across species: <a href="https://doi.org/10.1038/s41592-020-0809-4" target="_blank">Mathis et al., Nature Methods 17: 944-946 (2020)</a>.</p>
 
-          <h2>Conclusion</h2>
-          <p>From linear population vectors to deep neural networks, neural decoding has evolved into a precise quantitative tool. The convergence of large-scale neural recordings, computational advances, and frameworks like those developed by Mathis and Rütihauser positions the field to address questions about how neural activity gives rise to cognition—questions that were previously inaccessible to experimental investigation.</p>
+          <h2>Where we are now</h2>
+          <<h2>Where we are now</h2>
+<p>Today neural decoding is used in clinical trials for paralyzed patients and has helped restore movement to people with spinal cord injuries. Recent work using recurrent neural networks and transformers is pushing decoding accuracy even higher. We are now at a point where artificial limbs controlled by thought alone are becoming a reality for patients who have lost limbs.</p>
 
-          <div class="blog-references">
-            <h3>References</h3>
-            <ol>
-              <li>Mathis, A., et al. (2018). DeepLabCut: markerless pose estimation of user-defined body parts with deep learning. <em>Nature Neuroscience</em>, 21(9), 1281-1289. <a href="https://doi.org/10.1038/s41593-018-0209-y">DOI: 10.1038/s41593-018-0209-y</a></li>
-              <li>Mathis, M.W. (2022). Unsupervised deep learning for Bayesian comparison of neural manifolds. <em>Nature Methods</em>, 19, 1442-1445. <a href="https://doi.org/10.1038/s41592-022-01443-9">DOI: 10.1038/s41592-022-01443-9</a></li>
-              <li>Rütihauser, U., et al. (2018). Representation of retrieval confidence by single neurons in the human medial temporal lobe. <em>Nature Communications</em>, 9, 5156. <a href="https://doi.org/10.1038/s41467-018-06278-8">DOI: 10.1038/s41467-018-06278-8</a></li>
-              <li>Rütihauser, U., et al. (2015). Memory formation by neuronal phase-locking in the human medial temporal lobe. <em>Science</em>, 349(6250), 903-907. <a href="https://doi.org/10.1126/science.aaf8168">DOI: 10.1126/science.aaf8168</a></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </article>
-  </main>
-  <footer class="footer bg-less-dark">
-    <h2 class="visually-hidden">Footer</h2>
-    <div class="wrapper">
-      <nav class="header__nav">
-        <a href="/" class="header__home"> SamedVossberg <span class="visually-hidden">(to home page)</span> </a>
-        <a href="https://github.com/SamedVossberg" class="header__social">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialGitHub" role="img">
-            <title id="socialGitHub">GitHub</title>
-            <path fill="#FFF" fill-rule="evenodd" d="M12.304 0C5.506 0 0 5.506 0 12.304c0 5.444 3.522 10.042 8.413 11.672.615.108.845-.261.845-.584 0-.292-.015-1.261-.015-2.291-3.091.569-3.891-.754-4.137-1.446-.138-.354-.738-1.446-1.261-1.738-.43-.23-1.046-.8-.016-.815.97-.015 1.661.892 1.892 1.261 1.107 1.86 2.876 1.338 3.584 1.015.107-.8.43-1.338.784-1.646-2.738-.307-5.598-1.368-5.598-6.074 0-1.338.477-2.446 1.26-3.307-.122-.308-.553-1.569.124-3.26 0 0 1.03-.323 3.383 1.26.985-.276 2.03-.415 3.076-.415 1.046 0 2.092.139 3.076.416 2.353-1.6 3.384-1.261 3.384-1.261.676 1.691.246 2.952.123 3.26.784.861 1.26 1.953 1.26 3.307 0 4.721-2.875 5.767-5.613 6.074.446.385.83 1.123.83 2.277 0 1.645-.015 2.968-.015 3.383 0 .323.231.708.846.584a12.324 12.324 0 0 0 8.382-11.672C24.607 5.506 19.101 0 12.304 0Z" />
-          </svg>
-        </a>
-        <a href="https://scholar.google.com/citations?user=J4QLXwUAAAAJ&hl=de" class="header__social">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialScholar" role="img" viewBox="0 0 512 512">
-            <title id="socialScholar">Google Scholar</title>
-            <path fill="#FFF" fill-rule="evenodd" d="M256 411.12L0 202.667 256 0z"/>
-            <path fill="#FFF" fill-rule="evenodd" d="M256 411.12l256-208.453L256 0z"/>
-            <circle fill="#FFF" fill-rule="evenodd" cx="256" cy="362.667" r="149.333"/>
-            <path fill="#FFF" fill-rule="evenodd" d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/samed-rouven-v-a110a116b/" class="header__social">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialLinkedIn" role="img">
-            <title id="socialLinkedIn">LinkedIn</title>
-            <path fill="#FFF" fill-rule="evenodd" d="M5.551 3.304c-1.14 0-2.067.926-2.067 2.064 0 1.14.928 2.066 2.067 2.066a2.066 2.066 0 0 0 0-4.13ZM3.767 8.998v11.453h3.562L7.33 8.998H3.767Zm5.798 0V20.45l3.554.002.002-5.668c0-1.454.253-2.941 2.132-2.941 1.851 0 1.851 1.755 1.851 3.036v5.571l3.559-.001v-6.28c0-2.834-.517-5.457-4.27-5.457-1.763 0-2.916.997-3.368 1.85h-.05V8.997h-3.41ZM22.435 24H1.982c-.976 0-1.77-.777-1.77-1.732V1.731C.212.776 1.006 0 1.982 0h20.453c.98 0 1.777.776 1.777 1.73v20.538c0 .955-.797 1.732-1.777 1.732Z" />
-          </svg>
-        </a>
-      </nav>
-    </div>
-  </footer>
+<p>The field has come a long way from single neuron recordings to real time brain computer interfaces. What was once science fiction is now entering clinical practice.</p>
+
+<div class="blog-references">
+<h3>References</h3>
+<ol>
+<li>Georgopoulos AP, Kalaska JF, Caminiti R, Massey JT. On the relations between the direction of two-dimensional arm movements and cell discharge in primate motor cortex. <em>Journal of Neuroscience</em>. 1982;2(11):1527-1537. <a href="https://doi.org/10.1523/jneurosci.02-11-01527.1982" target="_blank">DOI: 10.1523/jneurosci.02-11-01527.1982</a></li>
+<li>Georgopoulos AP, Schwartz AB, Kettner RE. Neuronal population coding of movement direction. <em>Science</em>. 1986;233(4771):1416-1419. <a href="https://doi.org/10.1126/science.3748611" target="_blank">DOI: 10.1126/science.3748611</a></li>
+<li>Hochberg LR, Serruya MD, Friehs GM, et al. Neuronal ensemble control of prosthetic devices by a human with tetraplegia. <em>Nature</em>. 2006;442(7099):164-171. <a href="https://doi.org/10.1038/nature04970" target="_blank">DOI: 10.1038/nature04970</a></li>
+<li>Mathis A, Mamidanna P, Cury KM, et al. DeepLabCut: markerless pose estimation of user-defined body parts with deep learning. <em>Nature Neuroscience</em>. 2018;21(9):1281-1289. <a href="https://doi.org/10.1038/s41593-018-0209-y" target="_blank">DOI: 10.1038/s41593-018-0209-y</a></li>
+<li>Mathis A, Biasi T, Schneider S, Yukiyama W, Rogers B, Mathis MW. Pretraining boosts out-of-domain robustness for pose estimation. <em>Nature Methods</em>. 2020;17(9):944-946. <a href="https://doi.org/10.1038/s41592-020-0809-4" target="_blank">DOI: 10.1038/s41592-020-0809-4</a></li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+</main>
+
+<footer class="footer bg-less-dark">
+<h2 class="visually-hidden">Footer</h2>
+<div class="wrapper">
+<nav class="header__nav">
+<a href="/" class="header__home"> SamedVossberg <span class="visually-hidden">(to home page)</span> </a>
+<a href="https://github.com/SamedVossberg" class="header__social">
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialGitHub" role="img">
+<title id="socialGitHub">GitHub</title>
+<path fill="#FFF" fill-rule="evenodd" d="M12.304 0C5.506 0 0 5.506 0 12.304c0 5.444 3.522 10.042 8.413 11.672.615.108.845-.261.845-.584 0-.292-.015-1.261-.015-2.291-3.091.569-3.891-.754-4.137-1.446-.138-.354-.738-1.446-1.261-1.738-.43-.23-1.046-.8-.016-.815.97-.015 1.661.892 1.892 1.261 1.107 1.86 2.876 1.338 3.584 1.015.107-.8.43-1.338.784-1.646-2.738-.307-5.598-1.368-5.598-6.074 0-1.338.477-2.446 1.26-3.307-.122-.308-.553-1.569.124-3.26 0 0 1.03-.323 3.383 1.26.985-.276 2.03-.415 3.076-.415 1.046 0 2.092.139 3.076.416 2.353-1.6 3.384-1.261 3.384-1.261.676 1.691.246 2.952.123 3.26.784.861 1.26 1.953 1.26 3.307 0 4.721-2.875 5.767-5.613 6.074.446.385.83 1.123.83 2.277 0 1.645-.015 2.968-.015 3.383 0 .323.231.708.846.584a12.324 12.324 0 0 0 8.382-11.672C24.607 5.506 19.101 0 12.304 0Z"/>
+</svg>
+</a>
+<a href="https://scholar.google.com/citations?user=J4QLXwUAAAAJ&hl=de" class="header__social">
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialScholar" role="img" viewBox="0 0 512 512">
+<title id="socialScholar">Google Scholar</title>
+<path fill="#FFF" fill-rule="evenodd" d="M256 411.12L0 202.667 256 0z"/>
+<path fill="#FFF" fill-rule="evenodd" d="M256 411.12l256-208.453L256 0z"/>
+<circle fill="#FFF" fill-rule="evenodd" cx="256" cy="362.667" r="149.333"/>
+<path fill="#FFF" fill-rule="evenodd" d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z"/>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/samed-rouven-v-a110a116b/" class="header__social">
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" aria-labelledby="socialLinkedIn" role="img">
+<title id="socialLinkedIn">LinkedIn</title>
+<path fill="#FFF" fill-rule="evenodd" d="M5.551 3.304c-1.14 0-2.067.926-2.067 2.064 0 1.14.928 2.066 2.067 2.066a2.066 2.066 0 0 0 0-4.13ZM3.767 8.998v11.453h3.562L7.33 8.998H3.767Zm5.798 0V20.45l3.554.002.002-5.668c0-1.454.253-2.941 2.132-2.941 1.851 0 1.851 1.755 1.851 3.036v5.571l3.559-.001v-6.28c0-2.834-.517-5.457-4.27-5.457-1.763 0-2.916.997-3.368 1.85h-.05V8.997h-3.41ZM22.435 24H1.982c-.976 0-1.77-.777-1.77-1.732V1.731C.212.776 1.006 0 1.982 0h20.453c.98 0 1.777.776 1.777 1.73v20.538c0 .955-.797 1.732-1.777 1.732Z"/>
+</svg>
+</a>
+</nav>
+</div>
+</footer>
 </body>
 </html>
